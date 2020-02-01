@@ -14,7 +14,7 @@ npm install weapp-input-frame
 *.json
 ```json
 "usingComponents": {
-  "input-frame": "weapp-input-frame/dist/index"
+  "input-frame": "miniprogram_npm/weapp-input-frame/index"
 }
 ```
 
