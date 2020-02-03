@@ -1,19 +1,21 @@
-<view class="input-frame">
+<view class="input-frame custom-class {{ frameStyle }}">
   <input 
     type="text" 
     class="input-frame__input" 
     value="{{ _value }}" 
-    maxlength="{{ 6 }}"
+    maxlength="{{ space }}"
     cursor="{{ cursor }}"
     focus="{{ isFocus }}"
     type="number"
     bind:input="onInputChange"
     bind:focus="onInputFocus"
   />
-  <view class="input-item" bind:tap="onClick">{{ valueList[0] }}</view>
-  <view class="input-item" bind:tap="onClick">{{ valueList[1] }}</view>
-  <view class="input-item" bind:tap="onClick">{{ valueList[2] }}</view>
-  <view class="input-item" bind:tap="onClick">{{ valueList[3] }}</view>
-  <view class="input-item" bind:tap="onClick">{{ valueList[4] }}</view>
-  <view class="input-item" bind:tap="onClick">{{ valueList[5] }}</view>
+  <view 
+    class="input-item" 
+    bind:tap="onClick" 
+    wx:for="{{ space }}" 
+    wx:key="index"
+  >
+    {{ valueList[index] }}
+  </view>
 </view>

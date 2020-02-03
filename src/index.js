@@ -1,12 +1,19 @@
 
 Component({
+  externalClasses: ['custom-class'],
   options: {
     styleIsolation: 'shared'
   },
   properties: {
     plaintext: Boolean,
     value: String,
-    focus: Boolean
+    focus: Boolean,
+    // divider
+    frameStyle: String,
+    space: {
+      type: Number,
+      value: 6
+    }
   },
   data: {
     _value: '',
@@ -41,11 +48,12 @@ Component({
     },
     onInputChange: function(e) {
       var value = e.detail.value;
+      var space = this.properties.space;
       this.setData({ _value: value });
       this.triggerEvent('change', value);
       this.init();
 
-      if (value.length >= 6) {
+      if (value.length >= space) {
         this.triggerEvent('finished', value);
       }
     },

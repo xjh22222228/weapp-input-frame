@@ -1,8 +1,14 @@
 # input-frame  ![GitHub package.json version](https://img.shields.io/github/package-json/v/xjh22222228/weapp-input-frame) ![GitHub](https://img.shields.io/github/license/xjh22222228/weapp-input-frame)
 
 
-# Screenshots
-<img src="src/assets/demo.jpg" width="300" alt="demo" />
+<center>
+  <img src="//github.com/xjh22222228/weapp-input-frame/blob/master/src/assets/poster.jpg" width="200" />
+</center>
+
+
+## Screenshots
+<img src="//github.com/xjh22222228/weapp-input-frame/blob/master/src/assets/demo1.jpg" width="300" />
+<img src="//github.com/xjh22222228/weapp-input-frame/blob/master/src/assets/demo2.jpg" width="300" />
 
 
 ## Install
@@ -30,22 +36,25 @@ npm install weapp-input-frame
 - focus 是否获取焦点, 默认 false
 - bind:change 输入发生变化触发
 - bind:finished 输入完成时触发
+- space 输入框的格子数量，一般 4 - 6， 默认 6
+- style 输入框的风格， `divider` | '' , 默认 ''
+- custom-class 自定义组件class
 
 ```html
 <input-frame
-  value=""
+  value="123456"
 
   plaintext
 
-  focus
+  focus="{{ true }}"
 
-  bind:change
+  bind:change="onChange"
 
-  bind:finished
+  bind:finished="onFinished"
 />
 ```
 
-# Methods
+## Methods
 
 - getValue 获取输入框值
 
