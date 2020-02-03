@@ -37,7 +37,7 @@ npm install weapp-input-frame
 - bind:change 输入发生变化触发
 - bind:finished 输入完成时触发
 - space 输入框的格子数量，一般 4 - 6， 默认 6
-- style 输入框的风格， `divider` | '' , 默认 ''
+- frameStyle 输入框的风格， `divider` / '' , 默认 ''
 - custom-class 自定义组件class
 
 ```html
