@@ -1,4 +1,5 @@
 <view class="input-frame custom-class {{ frameStyle }}">
+  <!-- hide -->
   <input 
     type="text" 
     class="input-frame__input" 
@@ -10,6 +11,8 @@
     bind:input="onInputChange"
     bind:focus="onInputFocus"
   />
+
+  <!-- input -->
   <view 
     class="input-item" 
     bind:tap="onClick" 

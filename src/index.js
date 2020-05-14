@@ -61,7 +61,15 @@ Component({
       this.setCursorPosition();
     },
     getValue: function() {
-      return this.data._value;
+      var number = this.properties.space;
+      return this.data._value.slice(0, number);
+    },
+    setValue: function(v) {
+      if (v == null) return;
+
+      v = String(v);
+      this.setData({ _value: v });
+      this.init();
     }
   }
 })

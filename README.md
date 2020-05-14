@@ -1,22 +1,25 @@
 # input-frame  ![GitHub package.json version](https://img.shields.io/github/package-json/v/xjh22222228/weapp-input-frame) ![GitHub](https://img.shields.io/github/license/xjh22222228/weapp-input-frame)
 
+小程序输入框组件，适用于支付密码、登录密码 等。
+
 
 <center>
-  <img src="//github.com/xjh22222228/weapp-input-frame/blob/master/src/assets/poster.jpg" width="200" />
+  <img src="https://raw.githubusercontent.com/xjh22222228/weapp-input-frame/master/src/assets/poster.jpg" width="200" />
 </center>
 
 
 ## Screenshots
-<img src="//github.com/xjh22222228/weapp-input-frame/blob/master/src/assets/demo1.jpg" width="300" />
-<img src="//github.com/xjh22222228/weapp-input-frame/blob/master/src/assets/demo2.jpg" width="300" />
+<img src="https://raw.githubusercontent.com/xjh22222228/weapp-input-frame/master/src/assets/demo1.jpg" width="300" />
+<img src="https://raw.githubusercontent.com/xjh22222228/weapp-input-frame/master/src/assets/demo2.jpg" width="300" />
 
 
-## Install
+## 安装
+安装完成在开发者工具执行 `npm build`
 ```bash
-npm install weapp-input-frame
+npm install weapp-input-frame -S
 ```
 
-## Usage
+## 使用
 *.json
 ```json
 "usingComponents": {
@@ -25,7 +28,7 @@ npm install weapp-input-frame
 ```
 
 *.wxml
-```
+```html
 <input-frame />
 ```
 
@@ -43,20 +46,16 @@ npm install weapp-input-frame
 ```html
 <input-frame
   value="123456"
-
   plaintext
-
   focus="{{ true }}"
-
   bind:change="onChange"
-
   bind:finished="onFinished"
 />
 ```
 
-## Methods
-
+## 暴露方法
 - getValue 获取输入框值
+- setValue 动态设置输入框值
 
 wxml
 ```html
@@ -65,10 +64,15 @@ wxml
 
 js
 ```js
+// Demo
 Page({
   onLoad() {
     const el = this.selectComponent('#input-frame');
     el.getValue();
+  },
+  setVal() {
+    const el = this.selectComponent('#input-frame');
+    el.setValue(282828);
   }
 })
 ```
