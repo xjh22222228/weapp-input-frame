@@ -2,15 +2,11 @@
 
 小程序输入框组件，适用于支付密码、登录密码 等。
 
-
-<center>
-  <img src="https://raw.githubusercontent.com/xjh22222228/weapp-input-frame/master/src/assets/poster.jpg" width="200" />
-</center>
-
-
 ## Screenshots
-<img src="https://raw.githubusercontent.com/xjh22222228/weapp-input-frame/master/src/assets/demo1.jpg" width="300" />
-<img src="https://raw.githubusercontent.com/xjh22222228/weapp-input-frame/master/src/assets/demo2.jpg" width="300" />
+<div>
+  <img src="https://raw.githubusercontent.com/xjh22222228/weapp-input-frame/master/src/assets/demo1.jpg" width="300" />
+  <img src="https://raw.githubusercontent.com/xjh22222228/weapp-input-frame/master/src/assets/demo2.jpg" width="300" />
+</div>
 
 
 ## 安装
